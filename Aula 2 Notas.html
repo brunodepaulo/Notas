@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+  <style>
+  body {
+    background-color:rgb(6, 57, 66);
+  }
+  
+  table {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(6, 57, 66);
+    text-align: left;
+  }
+
+.flex {
+  margin: 0 auto;
+  border: 4px solid rgb(42, 216, 247);
+  width: 520px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 18px;
+  border-radius: 5px;
+  background-color: white;
+ }
+
+.bot_texto {
+  border: none;
+  color: rgb(6, 57, 66);
+  padding: 0px 0px;
+  text-align: left;
+  font-size: 13px;
+  width: 100px;
+  background-color: transparent;
+}
+
+.inp_sty {
+  border: 2px solid rgb(6, 57, 66); 
+  border-radius: 3px;
+  name="n1_joana";
+}
+  </style>
+ 
+<body>
+  <section class="flex">
+    <h1 style="color: rgb(6, 57, 66); font-size: 20px; font-family: arial, helvetica, sans-serif; font-weight:bold">LANÇAMENTOS DE NOTAS</h1>
+    <h1 style="color: rgb(6, 57, 66); font-size: 13px; padding-bottom: 2px; font-family: arial, helvetica, sans-serif; font-weight:bold">Selecione a disciplina
+      <select name="disciplinas" id="disc_sel" style="border: 2px solid rgb(6, 57, 66);">
+        <option value="">Introdução à informática</option>
+        <option value="">Linguagens de Programação</option>
+        <option value="">Programação de Computadores</option>
+      </select>
+    </h1>
+    <form id="formulario" method="post" action="">
+	  <table>
+	  <tr>
+	    <th>Nome do Aluno</th>
+	    <th>Prova 1</th>
+      <th>Prova 2</th>
+      <th>Exame</th>
+      <th>Média</th>
+      <th>Faltas</th>
+  	</tr>
+	  <tr>
+	    <td><button class="bot_texto"; disabled>Joana da Silva</button></td>
+	    <td><input class="inp_sty"; type="text" name="n1_joana"required="required" pattern="^[0-9.]+$" maxlength="2"; size="6"></input></td>
+      <td><input class="inp_sty"; type="text" name="n2_joana" required="required" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+      <td><input class="inp_sty"; type="text" name="ex_joana" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+      <td>
+        <input class="inp_sty"; type="text" name="media_joana" readonly="readonly" value=""; maxlength="2" size="6">
+      </td>
+      <td><input class="inp_sty"; type="text" id="faltas-td1" required="required" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+	  </tr>
+	  <tr>
+      <td>Maria do Socorro</td>
+	    <td><input class="inp_sty" type="text" id="n1_maria" required="required" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+      <td><input class="inp_sty" type="text" id="n2_maria" required="required" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+      <td><input class="inp_sty" type="text" id="ex_maria" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+      <td> 
+        <input class="inp_sty" type="text" name="media_maria" readonly="readonly" value=""; maxlength="2" size="6">
+      </td>
+      <td><input class="inp_sty" type="text" id="faltas-td2" required="required" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+    </tr>
+    <tr>
+      <td>Pedro dos Santos</td>
+	    <td><input class="inp_sty" type="text" id="n1_pedro" required="required" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+      <td><input class="inp_sty" type="text" id="n2_pedro" required="required" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+      <td><input class="inp_sty" type="text" id="ex_maria"  pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+      <td>
+        <input class="inp_sty" type="text" name="media_maria" readonly="readonly" value=""; maxlength="2" size="6">
+      </td>
+      <td><input class="inp_sty" type="text" id="faltas-td3"  required="required" pattern="^[0-9.]+$" maxlength="2" size="6"></td>
+	  </tr>
+    </table>
+    <br>
+    <button style="background-color:rgb(6, 57, 66); border-radius: 3px; color: white;  border: 4px solid rgb(6, 57, 66)">Salvar</button>
+    <input type="reset"  name="limpar" value="Limpar" style="background-color:rgb(6, 57, 66);  border-radius: 3px; color: white;  border: 4px solid rgb(6, 57, 66)"/>
+    </form>
+  </section>
+
+    <footer>
+      <br><p style="color: white; font-size: 9px;padding-top: 5px; font-family: arial, helvetica, sans-serif; font-weight:bold; font-style:italic">Desenvolvido por Bruno Conti</p>
+    </footer>
+
+    </body>
+</html>
